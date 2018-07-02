@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="387dp"
+        android:layout_height="189dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/left"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/colorPrimary"
+            android:text="@string/leftarrow"
+            android:textColor="#FFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/right"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_alignBaseline="@+id/left"
+            android:layout_alignBottom="@+id/left"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            android:background="@color/colorPrimary"
+            android:text=">"
+            android:textColor="#FFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_above="@+id/day"
+            android:layout_centerHorizontal="true"
+            android:background="@color/colorPrimary"
+            android:text="3"
+            android:textAlignment="center"
+            android:textColor="#FFF"
+            android:textSize="45sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dispdate" />
+        <TextView
+            android:id="@+id/day"
+            android:layout_width="131dp"
+            android:layout_height="38dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#FFF"
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/date" />
+
+        <TextView
+            android:id="@+id/dispdate"
+            android:layout_width="192dp"
+            android:layout_height="65dp"
+            android:layout_alignTop="@+id/left"
+            android:layout_centerHorizontal="true"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#FFF"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toStartOf="@+id/right"
+            app:layout_constraintTop_toTopOf="parent" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/evening"
+        android:layout_width="87dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="16dp"
+        android:text="மாலை :"
+        android:textColor="#000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/morning" />
+
+    <TextView
+        android:id="@+id/nallaneram"
+        android:layout_width="124dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:text="நல்ல நேரம்"
+        android:textColor="#000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+
+    <TextView
+        android:id="@+id/morning"
+        android:layout_width="87dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:text="காலை:"
+        android:textColor="#000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nallaneram" />
+
+    <TextView
+        android:id="@+id/morningtime"
+        android:layout_width="87dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="12dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/morning"
+        app:layout_constraintTop_toBottomOf="@+id/nallaneram" />
+
+    <TextView
+        android:id="@+id/eveningtime"
+        android:layout_width="87dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="28dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/evening"
+        app:layout_constraintTop_toTopOf="@+id/morningtime" />
+
+    <TextView
+        android:id="@+id/ragu"
+        android:layout_width="124dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:text="இராகு காலம்"
+        android:textColor="#000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/evening" />
+
+    <TextView
+        android:id="@+id/raguTime"
+        android:layout_width="133dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="12dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/ragu"
+        app:layout_constraintTop_toBottomOf="@+id/eveningtime" />
+
+    <TextView
+        android:id="@+id/yema"
+        android:layout_width="124dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp"
+        android:text="எமகண்டம்"
+        android:textColor="#000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ragu" />
+
+    <TextView
+        android:id="@+id/yamatime"
+        android:layout_width="134dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/yema"
+        app:layout_constraintTop_toBottomOf="@+id/raguTime" />
+</android.support.constraint.ConstraintLayout>
